@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="home" prefHeight="579.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vicemarks.HomeFXMLController">
+   <children>
+      <Label alignment="CENTER" layoutX="212.0" layoutY="116.0" text="RESULT SHEET" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+         <font>
+            <Font name="Arial Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <MenuBar prefHeight="25.0" prefWidth="602.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Refresh">
+            <items>
+              <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#btnrefresh" text="Refresh" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button fx:id="sendall" layoutX="100.0" layoutY="444.0" mnemonicParsing="false" onAction="#btnsendall" prefHeight="51.0" prefWidth="103.0" text="SEND_ALL" AnchorPane.leftAnchor="100.0" />
+      <Button fx:id="addcourse" layoutX="415.0" layoutY="51.0" mnemonicParsing="false" onAction="#btnaddcourse" prefHeight="42.0" prefWidth="143.0" text="IMPORT_RESULT_SHEET" AnchorPane.rightAnchor="377.0" />
+      <CheckBox fx:id="selectallcourse_checkbox" layoutX="533.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnselectallcourse_checkbox" prefHeight="17.0" prefWidth="18.0" AnchorPane.rightAnchor="51.0" />
+      <Label layoutX="511.0" layoutY="244.0" prefHeight="17.0" prefWidth="69.0" text="SELECT ALL" AnchorPane.rightAnchor="19.66666666666667" />
+      <Button fx:id="deletecourse" layoutX="322.0" layoutY="444.0" mnemonicParsing="false" onAction="#btndeletecourse" prefHeight="51.0" prefWidth="179.0" text="DELETE SELECTED COURSE" AnchorPane.rightAnchor="101.0" />
+      <Group layoutX="160.0" layoutY="187.0" />
+      <Label fx:id="labelnotification" layoutX="160.0" layoutY="25.0" text="." textFill="#d11414">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableview" layoutX="119.0" layoutY="153.0" prefHeight="259.0" prefWidth="386.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
+        <columns>
+          <TableColumn fx:id="coursename" prefWidth="327.99996185302734" text="COURSE NAME" />
+            <TableColumn fx:id="lecturer" prefWidth="75.0" text="LECTURER" />
+          <TableColumn fx:id="cb" prefWidth="72.6666259765625" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="work" layoutX="18.0" layoutY="263.0" mnemonicParsing="false" onAction="#btnwork" prefHeight="25.0" prefWidth="69.0" text="WORK" />
+      <TextField fx:id="sendalltextfield" layoutX="41.0" layoutY="539.0" prefHeight="25.0" prefWidth="244.0" promptText="--ENTER SENDER EMAIL ADDRESS HERE--" AnchorPane.bottomAnchor="14.666666666666668" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="650.0" />
+      <Label layoutX="18.0" layoutY="63.0" text="ENTER ALL INFORMATIONS AND CLICK ON &quot;SEND_ALL&quot;" AnchorPane.bottomAnchor="498.6666666666667" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="603.6666666666667" />
+      <Label layoutX="48.0" layoutY="84.0" text="TO SEND RESULTS TO EVERY STUDENT" />
+      <TextField fx:id="subject" layoutX="532.0" layoutY="539.0" prefHeight="25.0" prefWidth="215.0" promptText="--ENTER SUBJECT e.g SPRING 2021--" />
+      <PasswordField fx:id="password" layoutX="317.0" layoutY="539.0" prefHeight="25.0" prefWidth="179.0" promptText="--ENTER YOUR PASSWORD--" />
+   </children>
+</AnchorPane>
